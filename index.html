@@ -7,7 +7,7 @@
 
 <title>Açaí & Cia</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -15,50 +15,66 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Inter',sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f0f14;
+background:#0f0b14;
 color:white;
 }
 
-/* NAVBAR */
+/* HEADER */
 
-nav{
+header{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
-background:#0f0f14;
+background:#140d1f;
+box-shadow:0 5px 20px rgba(0,0,0,0.4);
 }
 
 .logo{
-font-size:22px;
-font-weight:700;
-color:#a855f7;
+display:flex;
+align-items:center;
+gap:12px;
 }
 
-.nav-btn{
+.logo img{
+width:55px;
+height:55px;
+border-radius:10px;
+object-fit:cover;
+}
+
+.logo span{
+font-size:22px;
+font-weight:600;
+}
+
+.header-btn{
 background:#25D366;
-padding:10px 18px;
+padding:10px 20px;
 border-radius:8px;
 text-decoration:none;
 color:white;
-font-weight:600;
+font-weight:500;
 }
 
 /* HERO */
 
 .hero{
+min-height:80vh;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
+justify-content:center;
 text-align:center;
-height:85vh;
-padding:20px;
-background:linear-gradient(135deg,#581c87,#9333ea);
+padding:40px 20px;
+background:linear-gradient(135deg,#4c1d95,#7e22ce);
+}
+
+.hero-content{
+max-width:700px;
 }
 
 .hero h1{
@@ -68,9 +84,8 @@ margin-bottom:15px;
 
 .hero p{
 font-size:18px;
-max-width:500px;
 opacity:0.9;
-margin-bottom:30px;
+margin-bottom:35px;
 }
 
 .cta{
@@ -92,26 +107,19 @@ transform:scale(1.05);
 
 .local{
 padding:70px 20px;
+background:#1a1225;
 text-align:center;
-background:#151520;
 }
 
 .local h2{
 font-size:30px;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 .endereco{
 font-size:17px;
 opacity:0.9;
-margin-bottom:35px;
-}
-
-/* MAPA */
-
-.mapa{
-display:flex;
-justify-content:center;
+margin-bottom:30px;
 }
 
 iframe{
@@ -129,16 +137,16 @@ position:fixed;
 bottom:25px;
 right:25px;
 background:#25D366;
-width:60px;
-height:60px;
+width:65px;
+height:65px;
 display:flex;
 align-items:center;
 justify-content:center;
 border-radius:50%;
-font-size:28px;
-color:white;
+font-size:30px;
 text-decoration:none;
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
+color:white;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 /* FOOTER */
@@ -146,12 +154,12 @@ box-shadow:0 10px 25px rgba(0,0,0,0.4);
 footer{
 text-align:center;
 padding:25px;
-background:#0c0c11;
+background:#0c0813;
 font-size:14px;
 opacity:0.7;
 }
 
-/* MOBILE */
+/* RESPONSIVO */
 
 @media(max-width:768px){
 
@@ -168,40 +176,56 @@ font-size:18px;
 padding:16px 30px;
 }
 
+header{
+padding:15px 6%;
+}
+
+.logo span{
+font-size:18px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
-<nav>
+<header>
 
-<div class="logo">Açaí & Cia 🍇</div>
+<div class="logo">
+<img src="logo.jpeg">
+<span>Açaí & Cia</span>
+</div>
 
-<a class="nav-btn"
+<a class="header-btn"
 href="https://wa.me/5588996888480?text=Olá,%20quero%20fazer%20um%20pedido">
 Pedir
 </a>
 
-</nav>
+</header>
 
 <section class="hero">
 
+<div class="hero-content">
+
 <h1>O melhor açaí de Senador Pompeu</h1>
 
-<p>Peça agora pelo WhatsApp e aproveite uma experiência irresistível.</p>
+<p>Peça agora pelo WhatsApp e aproveite o melhor açaí da região.</p>
 
 <a class="cta"
-href="https://wa.me/5588996888480?text=Olá,%20quero%20fazer%20um%20pedido%20de%20açaí">
+href="https://wa.me/5588996888480?text=Olá,%20quero%20fazer%20um%20pedido">
 Fazer Pedido
 </a>
+
+</div>
 
 </section>
 
 <section class="local">
 
-<h2>📍 Localização</h2>
+<h2>📍 Onde estamos</h2>
 
 <div class="endereco">
 R. São Pedro, 5<br>
@@ -209,21 +233,9 @@ Bairro Caracará<br>
 Senador Pompeu - CE
 </div>
 
-<div class="mapa">
-
-<iframe 
-src="https://maps.google.com/maps?q=R.%20São%20Pedro%205%20Senador%20Pompeu%20CE&t=&z=15&ie=UTF8&iwloc=&output=embed">
+<iframe
+src="https://maps.google.com/maps?q=R.%20São%20Pedro%205%20Senador%20Pompeu%20CE&output=embed">
 </iframe>
-
-</div>
-
-<br><br>
-
-<a class="cta"
-href="https://www.google.com/maps?q=R.%20São%20Pedro%205%20Senador%20Pompeu%20CE"
-target="_blank">
-Abrir no Google Maps
-</a>
 
 </section>
 
