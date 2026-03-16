@@ -1,256 +1,309 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Açaí & Cia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Poppins',sans-serif;
-        }
 
-        body{
-            background:#0e0e0e;
-            color:white;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* HEADER */
-        header{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:20px 8%;
-            border-bottom:1px solid #222;
-        }
+<title>Açaí & Cia</title>
 
-        .logo{
-            display:flex;
-            align-items:center;
-            gap:12px;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        .logo img{
-            width:55px;
-            border-radius:10px;
-        }
+<style>
 
-        .nome{
-            line-height:1;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-        .nome h1{
-            font-size:22px;
-        }
+body{
+background:#0e0e0e;
+color:white;
+}
 
-        .nome span{
-            font-size:16px;
-            opacity:0.8;
-        }
+/* HEADER */
 
-        /* HORÁRIO NO TOPO */
-        .topo-info{
-            display:flex;
-            align-items:center;
-        }
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+border-bottom:1px solid #222;
+}
 
-        .horario-topo{
-            font-size:14px;
-            opacity:0.8;
-            font-weight:500;
-        }
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
 
-        /* HERO */
-        .hero{
-            text-align:center;
-            padding:100px 20px 70px;
-            max-width:900px;
-            margin:auto;
-        }
+.logo img{
+width:55px;
+border-radius:10px;
+}
 
-        .hero h2{
-            font-size:42px;
-            margin-bottom:15px;
-        }
+.nome{
+line-height:1;
+}
 
-        .hero p{
-            font-size:18px;
-            opacity:0.85;
-            margin-bottom:35px;
-        }
+.nome h1{
+font-size:22px;
+}
 
-        .botao{
-            background:#25D366;
-            padding:18px 40px;
-            border-radius:10px;
-            text-decoration:none;
-            font-size:20px;
-            color:white;
-            font-weight:600;
-            display: inline-block;
-        }
+.nome span{
+font-size:16px;
+opacity:0.8;
+}
 
-        /* GALERIA */
-        .galeria{
-            padding:60px 20px;
-            text-align:center;
-            background:#141414;
-        }
+/* HORÁRIO NO TOPO */
 
-        .galeria h3{
-            font-size:28px;
-            margin-bottom:30px;
-        }
+.topo-info{
+display:flex;
+align-items:center;
+}
 
-        .carousel{
-            display:flex;
-            overflow-x:auto;
-            gap:20px;
-            padding:20px;
-            scroll-snap-type:x mandatory;
-        }
+.horario-topo{
+font-size:14px;
+opacity:0.8;
+font-weight:500;
+}
 
-        .carousel img{
-            width:300px;
-            border-radius:14px;
-            scroll-snap-align:center;
-        }
+/* HERO */
 
-        /* LOCAL */
-        .local{
-            padding:80px 20px;
-            text-align:center;
-        }
+.hero{
+text-align:center;
+padding:100px 20px 70px;
+max-width:900px;
+margin:auto;
+}
 
-        .local h3{
-            font-size:28px;
-            margin-bottom:10px;
-        }
+.hero h2{
+font-size:42px;
+margin-bottom:15px;
+}
 
-        .endereco{
-            opacity:0.85;
-            margin-bottom:15px;
-        }
+.hero p{
+font-size:18px;
+opacity:0.85;
+margin-bottom:35px;
+}
 
-        .horario{
-            font-size:16px;
-            margin-bottom:30px;
-            color:#25D366;
-            font-weight:500;
-        }
+.botao{
+background:#25D366;
+padding:18px 40px;
+border-radius:10px;
+text-decoration:none;
+font-size:20px;
+color:white;
+font-weight:600;
+display: inline-block; /* Garante o formato de botão */
+cursor: pointer;
+}
 
-        iframe{
-            width:90%;
-            max-width:700px;
-            height:320px;
-            border:none;
-            border-radius:12px;
-        }
+/* GALERIA */
 
-        /* BOTÃO WHATSAPP FLUTUANTE */
-        .whatsapp{
-            position:fixed;
-            bottom:25px;
-            right:25px;
-            background:#25D366;
-            width:65px;
-            height:65px;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            border-radius:50%;
-            font-size:30px;
-            text-decoration:none;
-            color:white;
-            box-shadow:0 8px 20px rgba(0,0,0,0.4);
-            z-index: 1000;
-        }
+.galeria{
+padding:60px 20px;
+text-align:center;
+background:#141414;
+}
 
-        /* FOOTER */
-        footer{
-            text-align:center;
-            padding:25px;
-            background:#0a0a0a;
-            font-size:14px;
-            opacity:0.7;
-        }
+.galeria h3{
+font-size:28px;
+margin-bottom:30px;
+}
 
-        /* RESPONSIVO */
-        @media(max-width:768px){
-            .hero h2{
-                font-size:32px;
-            }
-            .hero p{
-                font-size:16px;
-            }
-            .botao{
-                font-size:18px;
-                padding:16px 30px;
-            }
-            .carousel img{
-                width:230px;
-            }
-            .horario-topo{
-                font-size:12px;
-            }
-        }
-    </style>
+.carousel{
+display:flex;
+overflow-x:auto;
+gap:20px;
+padding:20px;
+scroll-snap-type:x mandatory;
+}
+
+.carousel img{
+width:300px;
+border-radius:14px;
+scroll-snap-align:center;
+}
+
+/* LOCAL */
+
+.local{
+padding:80px 20px;
+text-align:center;
+}
+
+.local h3{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.endereco{
+opacity:0.85;
+margin-bottom:15px;
+}
+
+.horario{
+font-size:16px;
+margin-bottom:30px;
+color:#25D366;
+font-weight:500;
+}
+
+iframe{
+width:90%;
+max-width:700px;
+height:320px;
+border:none;
+border-radius:12px;
+}
+
+/* BOTÃO WHATSAPP FLUTUANTE */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+width:65px;
+height:65px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:30px;
+text-decoration:none;
+color:white;
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+z-index: 1000;
+cursor: pointer;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:25px;
+background:#0a0a0a;
+font-size:14px;
+opacity:0.7;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+.hero h2{
+font-size:32px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.botao{
+font-size:18px;
+padding:16px 30px;
+}
+
+.carousel img{
+width:230px;
+}
+
+.horario-topo{
+font-size:12px;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
 <header>
-    <div class="logo">
-        <img src="logo.jpg">
-        <div class="nome">
-            <h1>Açaí</h1>
-            <span>& Cia</span>
-        </div>
-    </div>
-    <div class="topo-info">
-        <span class="horario-topo">🕒 17h – 22h</span>
-    </div>
+
+<div class="logo">
+
+<img src="logo.jpg">
+
+<div class="nome">
+<h1>Açaí</h1>
+<span>& Cia</span>
+</div>
+
+</div>
+
+<div class="topo-info">
+<span class="horario-topo">🕒 17h – 22h</span>
+</div>
+
 </header>
 
 <section class="hero">
-    <h2>O melhor açaí de Senador Pompeu</h2>
-    <p>Peça agora pelo WhatsApp e aproveite o verdadeiro sabor do açaí.</p>
-    <a class="botao" href="https://wa.me/5588996888480?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20meu%20pedido!%20%F0%9F%92%9C">
-        Pedir no WhatsApp 
-    </a>
+
+<h2>O melhor açaí de Senador Pompeu</h2>
+
+<p>Peça agora pelo WhatsApp e aproveite o verdadeiro sabor do açaí.</p>
+
+<a class="botao" onclick="abrirWhats()">
+Pedir no WhatsApp </a>
+
 </section>
 
 <section class="galeria">
-    <h3>Nossos Açaí</h3>
-    <div class="carousel">
-        <img src="acai1.jpeg">
-        <img src="acai2.jpeg">
-        <img src="acai3.jpeg">
-    </div>
+
+<h3>Nossos Açaí</h3>
+
+<div class="carousel">
+
+<img src="acai1.jpeg">
+<img src="acai2.jpeg">
+<img src="acai3.jpeg">
+
+</div>
+
 </section>
 
 <section class="local">
-    <h3>📍 Localização</h3>
-    <div class="endereco">
-        R. São Pedro, 5<br>
-        Bairro Caracará<br>
-        Senador Pompeu - CE
-    </div>
-    <div class="horario">
-        🕒 Funcionamento: 17h às 22h
-    </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.204368962638!2d-39.373!3d-5.59!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzUnMjQuMCJTIDM5wrAyMicyMi44Ilc!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr"></iframe>
+
+<h3>📍 Localização</h3>
+
+<div class="endereco">
+R. São Pedro, 5<br>
+Bairro Caracará<br>
+Senador Pompeu - CE
+</div>
+
+<div class="horario">
+🕒 Funcionamento: 17h às 22h
+</div>
+
+<iframe
+src="https://maps.google.com/maps?q=R.%20São%20Pedro%205%20Senador%20Pompeu%20CE&output=embed">
+</iframe>
+
 </section>
 
 <footer>
-    © 2026 Açaí & Cia
+© 2026 Açaí & Cia
 </footer>
 
-<a class="whatsapp" href="https://wa.me/5588996888480?text=Ol%C3%A1%2C%20gostaria%20de%20fazer%20meu%20pedido!%20%F0%9F%92%9C">
-    💬 
-</a>
+<a class="whatsapp" onclick="abrirWhats()">
+💬 </a>
+
+<script>
+    function abrirWhats() {
+        const telefone = "5588996888480";
+        const texto = "Olá, gostaria de fazer meu pedido! 💜";
+        const url = "https://api.whatsapp.com/send?phone=" + telefone + "&text=" + encodeURIComponent(texto);
+        window.location.href = url;
+    }
+</script>
 
 </body>
 </html>
