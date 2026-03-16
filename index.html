@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Açaí & Cia</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,157 +15,157 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins', sans-serif;
+font-family:'Inter',sans-serif;
 }
 
 body{
-background:#0e0e0e;
+background:#0f0f14;
 color:white;
 }
 
-/* HEADER */
+/* NAVBAR */
 
-header{
-position:fixed;
-width:100%;
-top:0;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(10px);
+nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
-z-index:100;
+padding:20px 8%;
+background:#0f0f14;
 }
 
 .logo{
 font-size:22px;
 font-weight:700;
-color:#fff;
+color:#a855f7;
 }
 
-.header-btn{
+.nav-btn{
 background:#25D366;
 padding:10px 18px;
 border-radius:8px;
 text-decoration:none;
 color:white;
-font-weight:500;
+font-weight:600;
 }
 
 /* HERO */
 
 .hero{
-height:100vh;
-background:url("https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e") center/cover;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
+height:85vh;
 padding:20px;
+background:linear-gradient(135deg,#581c87,#9333ea);
 }
 
 .hero h1{
-font-size:55px;
-margin-bottom:10px;
-text-shadow:0 4px 10px rgba(0,0,0,0.6);
+font-size:48px;
+margin-bottom:15px;
 }
 
 .hero p{
-font-size:20px;
-margin-bottom:25px;
+font-size:18px;
+max-width:500px;
 opacity:0.9;
+margin-bottom:30px;
 }
 
-.btn{
+.cta{
 background:#25D366;
 padding:18px 40px;
-border-radius:12px;
-text-decoration:none;
+border-radius:10px;
 font-size:20px;
+text-decoration:none;
 color:white;
 font-weight:600;
-transition:0.3s;
+transition:0.25s;
 }
 
-.btn:hover{
-transform:scale(1.07);
+.cta:hover{
+transform:scale(1.05);
 }
 
 /* LOCAL */
 
 .local{
-padding:80px 20px;
+padding:70px 20px;
 text-align:center;
-background:#151515;
+background:#151520;
 }
 
 .local h2{
-font-size:32px;
+font-size:30px;
 margin-bottom:15px;
 }
 
 .endereco{
-font-size:18px;
-margin-bottom:30px;
+font-size:17px;
 opacity:0.9;
+margin-bottom:35px;
 }
 
 /* MAPA */
+
+.mapa{
+display:flex;
+justify-content:center;
+}
 
 iframe{
 width:90%;
 max-width:700px;
 height:320px;
-border:none;
 border-radius:12px;
+border:none;
 }
 
-/* WHATSAPP FIXO */
+/* WHATSAPP */
 
 .whatsapp{
 position:fixed;
 bottom:25px;
 right:25px;
 background:#25D366;
-color:white;
-font-size:28px;
-padding:16px 20px;
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
 border-radius:50%;
+font-size:28px;
+color:white;
 text-decoration:none;
-box-shadow:0 5px 20px rgba(0,0,0,0.4);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 /* FOOTER */
 
 footer{
-background:#0a0a0a;
-padding:25px;
 text-align:center;
+padding:25px;
+background:#0c0c11;
 font-size:14px;
 opacity:0.7;
 }
 
-/* RESPONSIVO */
+/* MOBILE */
 
 @media(max-width:768px){
 
 .hero h1{
-font-size:36px;
+font-size:34px;
 }
 
 .hero p{
 font-size:16px;
 }
 
-.btn{
+.cta{
 font-size:18px;
 padding:16px 30px;
-}
-
-header{
-padding:15px 20px;
 }
 
 }
@@ -174,24 +175,24 @@ padding:15px 20px;
 
 <body>
 
-<header>
+<nav>
 
 <div class="logo">Açaí & Cia 🍇</div>
 
-<a class="header-btn"
+<a class="nav-btn"
 href="https://wa.me/5588996888480?text=Olá,%20quero%20fazer%20um%20pedido">
-Pedir no WhatsApp
+Pedir
 </a>
 
-</header>
+</nav>
 
 <section class="hero">
 
-<h1>O melhor açaí da região</h1>
+<h1>O melhor açaí de Senador Pompeu</h1>
 
-<p>Peça agora e tenha uma experiência irresistível</p>
+<p>Peça agora pelo WhatsApp e aproveite uma experiência irresistível.</p>
 
-<a class="btn"
+<a class="cta"
 href="https://wa.me/5588996888480?text=Olá,%20quero%20fazer%20um%20pedido%20de%20açaí">
 Fazer Pedido
 </a>
@@ -200,16 +201,29 @@ Fazer Pedido
 
 <section class="local">
 
-<h2>📍 Onde estamos</h2>
+<h2>📍 Localização</h2>
 
 <div class="endereco">
-Rua São Pedro • Bairro Caracará<br>
+R. São Pedro, 5<br>
+Bairro Caracará<br>
 Senador Pompeu - CE
 </div>
 
-<iframe
-src="https://www.google.com/maps?q=Senador+Pompeu+CE&output=embed">
+<div class="mapa">
+
+<iframe 
+src="https://maps.google.com/maps?q=R.%20São%20Pedro%205%20Senador%20Pompeu%20CE&t=&z=15&ie=UTF8&iwloc=&output=embed">
 </iframe>
+
+</div>
+
+<br><br>
+
+<a class="cta"
+href="https://www.google.com/maps?q=R.%20São%20Pedro%205%20Senador%20Pompeu%20CE"
+target="_blank">
+Abrir no Google Maps
+</a>
 
 </section>
 
