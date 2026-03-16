@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
 
@@ -7,7 +8,7 @@
 
 <title>Açaí & Cia</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -19,115 +20,125 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f0b14;
+background:#0b0b0b;
 color:white;
 }
 
 /* HEADER */
 
 header{
+position:absolute;
+top:0;
+width:100%;
 display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:#140d1f;
-box-shadow:0 5px 20px rgba(0,0,0,0.4);
+justify-content:center;
+padding:30px;
+z-index:10;
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:12px;
+text-align:center;
 }
 
 .logo img{
-width:55px;
-height:55px;
-border-radius:10px;
-object-fit:cover;
+width:70px;
+border-radius:12px;
+margin-bottom:8px;
+}
+
+.logo h1{
+font-size:26px;
+font-weight:700;
+line-height:1;
 }
 
 .logo span{
-font-size:22px;
-font-weight:600;
-}
-
-.header-btn{
-background:#25D366;
-padding:10px 20px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-font-weight:500;
+font-size:18px;
+opacity:0.8;
 }
 
 /* HERO */
 
 .hero{
-min-height:80vh;
+height:100vh;
+background:url("https://images.unsplash.com/photo-1615486363743-6f2b0b9a7e3d") center/cover;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:40px 20px;
-background:linear-gradient(135deg,#4c1d95,#7e22ce);
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
 }
 
 .hero-content{
+position:relative;
 max-width:700px;
+padding:20px;
 }
 
-.hero h1{
-font-size:48px;
+.hero h2{
+font-size:54px;
 margin-bottom:15px;
+animation:fadeUp 1s ease;
 }
 
 .hero p{
 font-size:18px;
 opacity:0.9;
 margin-bottom:35px;
+animation:fadeUp 1.3s ease;
 }
 
 .cta{
 background:#25D366;
-padding:18px 40px;
-border-radius:10px;
+padding:18px 45px;
+border-radius:12px;
 font-size:20px;
 text-decoration:none;
 color:white;
 font-weight:600;
 transition:0.25s;
+animation:fadeUp 1.6s ease;
 }
 
 .cta:hover{
-transform:scale(1.05);
+transform:scale(1.07);
 }
 
 /* LOCAL */
 
 .local{
-padding:70px 20px;
-background:#1a1225;
+padding:80px 20px;
 text-align:center;
+background:#121212;
 }
 
-.local h2{
+.local h3{
 font-size:30px;
-margin-bottom:10px;
+margin-bottom:15px;
 }
 
 .endereco{
 font-size:17px;
-opacity:0.9;
-margin-bottom:30px;
+opacity:0.85;
+margin-bottom:35px;
 }
 
 iframe{
 width:90%;
 max-width:700px;
 height:320px;
-border-radius:12px;
 border:none;
+border-radius:14px;
 }
 
 /* WHATSAPP */
@@ -146,7 +157,7 @@ border-radius:50%;
 font-size:30px;
 text-decoration:none;
 color:white;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
 }
 
 /* FOOTER */
@@ -154,17 +165,33 @@ box-shadow:0 10px 30px rgba(0,0,0,0.4);
 footer{
 text-align:center;
 padding:25px;
-background:#0c0813;
+background:#090909;
 font-size:14px;
-opacity:0.7;
+opacity:0.6;
 }
 
-/* RESPONSIVO */
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
-.hero h1{
-font-size:34px;
+.hero h2{
+font-size:36px;
 }
 
 .hero p{
@@ -176,12 +203,8 @@ font-size:18px;
 padding:16px 30px;
 }
 
-header{
-padding:15px 6%;
-}
-
-.logo span{
-font-size:18px;
+.logo img{
+width:60px;
 }
 
 }
@@ -196,13 +219,9 @@ font-size:18px;
 
 <div class="logo">
 <img src="logo.jpg">
-<span>Açaí & Cia</span>
+<h1>Açaí</h1>
+<span>& Cia</span>
 </div>
-
-<a class="header-btn"
-href="https://wa.me/5588996888480?text=Olá,%20quero%20fazer%20um%20pedido">
-Pedir
-</a>
 
 </header>
 
@@ -210,14 +229,13 @@ Pedir
 
 <div class="hero-content">
 
-<h1>O melhor açaí de Senador Pompeu</h1>
+<h2>O melhor açaí de Senador Pompeu</h2>
 
-<p>Peça agora pelo WhatsApp e aproveite o melhor açaí da região.</p>
+<p>Peça agora pelo WhatsApp e aproveite o verdadeiro sabor do açaí.</p>
 
 <a class="cta"
 href="https://wa.me/5588996888480?text=Olá,%20quero%20fazer%20um%20pedido">
-Fazer Pedido
-</a>
+Fazer Pedido </a>
 
 </div>
 
@@ -225,7 +243,7 @@ Fazer Pedido
 
 <section class="local">
 
-<h2>📍 Onde estamos</h2>
+<h3>📍 Localização</h3>
 
 <div class="endereco">
 R. São Pedro, 5<br>
@@ -240,13 +258,12 @@ src="https://maps.google.com/maps?q=R.%20São%20Pedro%205%20Senador%20Pompeu%20C
 </section>
 
 <footer>
-© 2026 Açaí & Cia • Senador Pompeu
+© 2026 Açaí & Cia
 </footer>
 
 <a class="whatsapp"
 href="https://wa.me/5588996888480">
-💬
-</a>
+💬 </a>
 
 </body>
 </html>
