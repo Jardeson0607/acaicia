@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
 
@@ -7,7 +8,7 @@
 
 <title>Açaí & Cia</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -15,7 +16,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Montserrat',sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
@@ -30,17 +31,16 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
-background:#0e0e0e;
 border-bottom:1px solid #222;
 }
 
-.logo-area{
+.logo{
 display:flex;
 align-items:center;
 gap:12px;
 }
 
-.logo-area img{
+.logo img{
 width:55px;
 border-radius:10px;
 }
@@ -58,27 +58,18 @@ font-size:16px;
 opacity:0.8;
 }
 
-.botao-topo{
-background:#25D366;
-padding:10px 18px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-font-weight:600;
-}
-
 /* HERO */
 
 .hero{
-padding:100px 20px;
 text-align:center;
+padding:100px 20px 70px;
 max-width:900px;
 margin:auto;
 }
 
 .hero h2{
-font-size:48px;
-margin-bottom:20px;
+font-size:42px;
+margin-bottom:15px;
 }
 
 .hero p{
@@ -97,12 +88,38 @@ color:white;
 font-weight:600;
 }
 
+/* CARROSSEL */
+
+.galeria{
+padding:60px 20px;
+text-align:center;
+background:#141414;
+}
+
+.galeria h3{
+font-size:28px;
+margin-bottom:30px;
+}
+
+.carousel{
+display:flex;
+overflow-x:auto;
+gap:20px;
+padding:20px;
+scroll-snap-type:x mandatory;
+}
+
+.carousel img{
+width:300px;
+border-radius:14px;
+scroll-snap-align:center;
+}
+
 /* LOCAL */
 
 .local{
 padding:80px 20px;
 text-align:center;
-background:#151515;
 }
 
 .local h3{
@@ -120,7 +137,7 @@ width:90%;
 max-width:700px;
 height:320px;
 border:none;
-border-radius:10px;
+border-radius:12px;
 }
 
 /* WHATSAPP */
@@ -136,7 +153,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 border-radius:50%;
-font-size:28px;
+font-size:30px;
 text-decoration:none;
 color:white;
 box-shadow:0 8px 20px rgba(0,0,0,0.4);
@@ -152,12 +169,12 @@ font-size:14px;
 opacity:0.7;
 }
 
-/* MOBILE */
+/* RESPONSIVO */
 
 @media(max-width:768px){
 
 .hero h2{
-font-size:34px;
+font-size:32px;
 }
 
 .hero p{
@@ -167,6 +184,10 @@ font-size:16px;
 .botao{
 font-size:18px;
 padding:16px 30px;
+}
+
+.carousel img{
+width:230px;
 }
 
 }
@@ -179,7 +200,7 @@ padding:16px 30px;
 
 <header>
 
-<div class="logo-area">
+<div class="logo">
 
 <img src="logo.jpg">
 
@@ -189,11 +210,6 @@ padding:16px 30px;
 </div>
 
 </div>
-
-<a class="botao-topo"
-href="https://wa.me/5588996888480">
-Pedir
-</a>
 
 </header>
 
@@ -205,8 +221,21 @@ Pedir
 
 <a class="botao"
 href="https://wa.me/5588996888480?text=Olá,%20quero%20fazer%20um%20pedido">
-Fazer Pedido
-</a>
+Pedir no WhatsApp </a>
+
+</section>
+
+<section class="galeria">
+
+<h3>Nosso Açaí</h3>
+
+<div class="carousel">
+
+<img src="acai1.jpg">
+<img src="acai2.jpg">
+<img src="acai3.jpg">
+
+</div>
 
 </section>
 
@@ -232,8 +261,7 @@ src="https://maps.google.com/maps?q=R.%20São%20Pedro%205%20Senador%20Pompeu%20C
 
 <a class="whatsapp"
 href="https://wa.me/5588996888480">
-💬
-</a>
+💬 </a>
 
 </body>
 </html>
